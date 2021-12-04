@@ -16,3 +16,20 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'auth'], function () use ($router) {
+    $router->post('/login', 'AuthController@login');
+    $router->post('/register', 'AuthController@register');
+
+
+    $router->group(['middleware' => 'auth'], function () use ($router) {
+        $router->put('/register', 'AuthController@update');
+        $router->post('/logout', 'AuthController@logout');
+
+        $router->get('/mockdata', 'mock_dataController@index');
+        $router->get('/mockdata/{id}', 'mock_dataController@getmock_dataById');
+        $router->post('/mockdata', 'mock_dataController@store');
+        $router->put('/mockdata/{id}', 'mock_dataController@update');
+        $router->delete('/mockdata/{id}', 'mock_dataController@destroy');
+    });
+});

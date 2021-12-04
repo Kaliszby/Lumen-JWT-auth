@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <title>Lumen Documentation</title>
+
+        <link
+            href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="../docs/css/style.css" media="screen" />
+        <link rel="stylesheet" href="../docs/css/print.css" media="print" />
+        <script src="../docs/js/all.js"></script>
+
+        <link
+            rel="stylesheet"
+            href="../docs/css/highlight-darcula.css"
+            media=""
+        />
+        <script src="../docs/js/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+
+    <body class="" data-languages='["bash","javascript"]'>
+        <a href="#" id="nav-button">
+            <span>
+                NAV
+                <img src="../docs/images/navbar.png" alt="-image" class="" />
+            </span>
+        </a>
+        <div class="tocify-wrapper">
+            <div class="lang-selector">
+                <a href="#" data-language-name="bash">bash</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+            </div>
+            <div class="search">
+                <input
+                    type="text"
+                    class="search"
+                    id="input-search"
+                    placeholder="Search"
+                />
+            </div>
+            <ul class="search-results"></ul>
+
+            <ul id="toc"></ul>
+
+            <ul class="toc-footer" id="toc-footer">
+                <li>
+                    <a href="../docs/collection.json"
+                        >View Postman collection</a
+                    >
+                </li>
+                <li>
+                    <a href="../docs/openapi.yaml"
+                        >View OpenAPI (Swagger) spec</a
+                    >
+                </li>
+                <li>
+                    <a href="http://github.com/knuckleswtf/scribe"
+                        >Documentation powered by Scribe ✍</a
+                    >
+                </li>
+            </ul>
+            <ul class="toc-footer" id="last-updated">
+                <li>Last updated: December 4 2021</li>
+            </ul>
+        </div>
+        <div class="page-wrapper">
+            <div class="dark-box"></div>
+            <div class="content">
+                <h1>Introduction</h1>
+                <p>
+                    This documentation aims to provide all the information you
+                    need to work with our API.
+                </p>
+                <aside>
+                    As you scroll, you'll see code examples for working with the
+                    API in different programming languages in the dark area to
+                    the right (or as part of the content on mobile). You can
+                    switch the language used with the tabs at the top right (or
+                    from the nav menu at the top left on mobile).
+                </aside>
+                <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+                <script>
+                    var baseUrl = "http://localhost";
+                </script>
+                <script src="../docs/js/tryitout-2.7.10.js"></script>
+                <blockquote>
+                    <p>Base URL</p>
+                </blockquote>
+                <pre><code class="language-yaml">http://localhost</code></pre>
+                <h1>Authenticating requests</h1>
+                <p>This API is not authenticated.</p>
+                <h1>Endpoints</h1>
+                <h2>/</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <blockquote>
+                    <p>Example response (200):</p>
+                </blockquote>
+                <pre><code class="language-json">
+Lumen (8.3.1) (Laravel Components ^8.0)</code></pre>
+                <div id="execution-results-GET-" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-GET-"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-GET-"></code></pre>
+                </div>
+                <div id="execution-error-GET-" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-GET-"></code></pre>
+                </div>
+                <form
+                    id="form-GET-"
+                    data-method="GET"
+                    data-path="/"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('GET-', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-GET-"
+                            onclick="tryItOut('GET-');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-GET-"
+                            onclick="cancelTryOut('GET-');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-GET-"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-green">GET</small>
+                        <b><code>/</code></b>
+                    </p>
+                </form>
+                <h2>auth/login</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X POST \
+    "http://localhost/auth/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/auth/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <div id="execution-results-POSTauth-login" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-POSTauth-login"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-POSTauth-login"></code></pre>
+                </div>
+                <div id="execution-error-POSTauth-login" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-POSTauth-login"></code></pre>
+                </div>
+                <form
+                    id="form-POSTauth-login"
+                    data-method="POST"
+                    data-path="auth/login"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('POSTauth-login', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-POSTauth-login"
+                            onclick="tryItOut('POSTauth-login');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-POSTauth-login"
+                            onclick="cancelTryOut('POSTauth-login');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-POSTauth-login"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-black">POST</small>
+                        <b><code>auth/login</code></b>
+                    </p>
+                </form>
+                <h2>auth/register</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X POST \
+    "http://localhost/auth/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/auth/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <div id="execution-results-POSTauth-register" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-POSTauth-register"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-POSTauth-register"></code></pre>
+                </div>
+                <div id="execution-error-POSTauth-register" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-POSTauth-register"></code></pre>
+                </div>
+                <form
+                    id="form-POSTauth-register"
+                    data-method="POST"
+                    data-path="auth/register"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('POSTauth-register', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-POSTauth-register"
+                            onclick="tryItOut('POSTauth-register');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-POSTauth-register"
+                            onclick="cancelTryOut('POSTauth-register');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-POSTauth-register"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-black">POST</small>
+                        <b><code>auth/register</code></b>
+                    </p>
+                </form>
+                <h2>Log the user out (Invalidate the token).</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X POST \
+    "http://localhost/auth/logout" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/auth/logout"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <div id="execution-results-POSTauth-logout" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-POSTauth-logout"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-POSTauth-logout"></code></pre>
+                </div>
+                <div id="execution-error-POSTauth-logout" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-POSTauth-logout"></code></pre>
+                </div>
+                <form
+                    id="form-POSTauth-logout"
+                    data-method="POST"
+                    data-path="auth/logout"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('POSTauth-logout', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-POSTauth-logout"
+                            onclick="tryItOut('POSTauth-logout');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-POSTauth-logout"
+                            onclick="cancelTryOut('POSTauth-logout');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-POSTauth-logout"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-black">POST</small>
+                        <b><code>auth/logout</code></b>
+                    </p>
+                </form>
+                <h2>auth/mockdata</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/auth/mockdata" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/auth/mockdata"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <blockquote>
+                    <p>Example response (401):</p>
+                </blockquote>
+                <pre><code class="language-json">
+Unauthorized.</code></pre>
+                <div id="execution-results-GETauth-mockdata" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-GETauth-mockdata"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-GETauth-mockdata"></code></pre>
+                </div>
+                <div id="execution-error-GETauth-mockdata" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-GETauth-mockdata"></code></pre>
+                </div>
+                <form
+                    id="form-GETauth-mockdata"
+                    data-method="GET"
+                    data-path="auth/mockdata"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('GETauth-mockdata', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-GETauth-mockdata"
+                            onclick="tryItOut('GETauth-mockdata');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-GETauth-mockdata"
+                            onclick="cancelTryOut('GETauth-mockdata');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-GETauth-mockdata"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-green">GET</small>
+                        <b><code>auth/mockdata</code></b>
+                    </p>
+                </form>
+                <h2>auth/mockdata/{id}</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/auth/mockdata/nemo" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/auth/mockdata/nemo"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <blockquote>
+                    <p>Example response (401):</p>
+                </blockquote>
+                <pre><code class="language-json">
+Unauthorized.</code></pre>
+                <div id="execution-results-GETauth-mockdata--id-" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-GETauth-mockdata--id-"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-GETauth-mockdata--id-"></code></pre>
+                </div>
+                <div id="execution-error-GETauth-mockdata--id-" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-GETauth-mockdata--id-"></code></pre>
+                </div>
+                <form
+                    id="form-GETauth-mockdata--id-"
+                    data-method="GET"
+                    data-path="auth/mockdata/{id}"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('GETauth-mockdata--id-', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-GETauth-mockdata--id-"
+                            onclick="tryItOut('GETauth-mockdata--id-');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-GETauth-mockdata--id-"
+                            onclick="cancelTryOut('GETauth-mockdata--id-');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-GETauth-mockdata--id-"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-green">GET</small>
+                        <b><code>auth/mockdata/{id}</code></b>
+                    </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                        <b><code>id</code></b
+                        >&nbsp;&nbsp;<small>string</small> &nbsp;
+                        <input
+                            type="text"
+                            name="id"
+                            data-endpoint="GETauth-mockdata--id-"
+                            data-component="url"
+                            required
+                            hidden
+                        />
+                        <br />
+                    </p>
+                </form>
+                <h2>auth/mockdata</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X POST \
+    "http://localhost/auth/mockdata" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/auth/mockdata"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <div id="execution-results-POSTauth-mockdata" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-POSTauth-mockdata"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-POSTauth-mockdata"></code></pre>
+                </div>
+                <div id="execution-error-POSTauth-mockdata" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-POSTauth-mockdata"></code></pre>
+                </div>
+                <form
+                    id="form-POSTauth-mockdata"
+                    data-method="POST"
+                    data-path="auth/mockdata"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('POSTauth-mockdata', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-POSTauth-mockdata"
+                            onclick="tryItOut('POSTauth-mockdata');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-POSTauth-mockdata"
+                            onclick="cancelTryOut('POSTauth-mockdata');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-POSTauth-mockdata"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-black">POST</small>
+                        <b><code>auth/mockdata</code></b>
+                    </p>
+                </form>
+                <h2>auth/mockdata/{id}</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X PUT \
+    "http://localhost/auth/mockdata/eum" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/auth/mockdata/eum"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <div id="execution-results-PUTauth-mockdata--id-" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-PUTauth-mockdata--id-"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-PUTauth-mockdata--id-"></code></pre>
+                </div>
+                <div id="execution-error-PUTauth-mockdata--id-" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-PUTauth-mockdata--id-"></code></pre>
+                </div>
+                <form
+                    id="form-PUTauth-mockdata--id-"
+                    data-method="PUT"
+                    data-path="auth/mockdata/{id}"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('PUTauth-mockdata--id-', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-PUTauth-mockdata--id-"
+                            onclick="tryItOut('PUTauth-mockdata--id-');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-PUTauth-mockdata--id-"
+                            onclick="cancelTryOut('PUTauth-mockdata--id-');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-PUTauth-mockdata--id-"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-darkblue">PUT</small>
+                        <b><code>auth/mockdata/{id}</code></b>
+                    </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                        <b><code>id</code></b
+                        >&nbsp;&nbsp;<small>string</small> &nbsp;
+                        <input
+                            type="text"
+                            name="id"
+                            data-endpoint="PUTauth-mockdata--id-"
+                            data-component="url"
+                            required
+                            hidden
+                        />
+                        <br />
+                    </p>
+                </form>
+                <h2>auth/mockdata/{id}</h2>
+                <blockquote>
+                    <p>Example request:</p>
+                </blockquote>
+                <pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/auth/mockdata/officiis" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+                <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/auth/mockdata/officiis"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+                <div id="execution-results-DELETEauth-mockdata--id-" hidden>
+                    <blockquote>
+                        Received response<span
+                            id="execution-response-status-DELETEauth-mockdata--id-"
+                        ></span
+                        >:
+                    </blockquote>
+                    <pre
+                        class="json"
+                    ><code id="execution-response-content-DELETEauth-mockdata--id-"></code></pre>
+                </div>
+                <div id="execution-error-DELETEauth-mockdata--id-" hidden>
+                    <blockquote>Request failed with error:</blockquote>
+                    <pre><code id="execution-error-message-DELETEauth-mockdata--id-"></code></pre>
+                </div>
+                <form
+                    id="form-DELETEauth-mockdata--id-"
+                    data-method="DELETE"
+                    data-path="auth/mockdata/{id}"
+                    data-authed="0"
+                    data-hasfiles="0"
+                    data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+                    onsubmit="event.preventDefault(); executeTryOut('DELETEauth-mockdata--id-', this);"
+                >
+                    <h3>
+                        Request&nbsp;&nbsp;&nbsp;
+                        <button
+                            type="button"
+                            style="
+                                background-color: #8fbcd4;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-tryout-DELETEauth-mockdata--id-"
+                            onclick="tryItOut('DELETEauth-mockdata--id-');"
+                        >
+                            Try it out ⚡
+                        </button>
+                        <button
+                            type="button"
+                            style="
+                                background-color: #c97a7e;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-canceltryout-DELETEauth-mockdata--id-"
+                            onclick="cancelTryOut('DELETEauth-mockdata--id-');"
+                            hidden
+                        >
+                            Cancel</button
+                        >&nbsp;&nbsp;
+                        <button
+                            type="submit"
+                            style="
+                                background-color: #6ac174;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border-width: thin;
+                            "
+                            id="btn-executetryout-DELETEauth-mockdata--id-"
+                            hidden
+                        >
+                            Send Request 💥
+                        </button>
+                    </h3>
+                    <p>
+                        <small class="badge badge-red">DELETE</small>
+                        <b><code>auth/mockdata/{id}</code></b>
+                    </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                        <b><code>id</code></b
+                        >&nbsp;&nbsp;<small>string</small> &nbsp;
+                        <input
+                            type="text"
+                            name="id"
+                            data-endpoint="DELETEauth-mockdata--id-"
+                            data-component="url"
+                            required
+                            hidden
+                        />
+                        <br />
+                    </p>
+                </form>
+            </div>
+            <div class="dark-box">
+                <div class="lang-selector">
+                    <a href="#" data-language-name="bash">bash</a>
+                    <a href="#" data-language-name="javascript">javascript</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                var languages = ["bash", "javascript"];
+                setupLanguages(languages);
+            });
+        </script>
+    </body>
+</html>

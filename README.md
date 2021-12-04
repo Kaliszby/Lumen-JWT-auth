@@ -31,4 +31,4 @@ php -S localhost:8000 -t public
 
 ## API Documentation
 
-localhost/docs
+http://localhost:8000/docs
